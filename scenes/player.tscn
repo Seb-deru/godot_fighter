@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds05i2lwfffyj"]
+
+[ext_resource type="Texture2D" uid="uid://b64dq5lnhrfhi" path="res://assets/sprites/godot_logo.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dh3iflrwggn6o" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(56, 53)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_g2els")
