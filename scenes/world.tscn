@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dr6k47ny2l1os"]
+[gd_scene load_steps=3 format=3 uid="uid://dr6k47ny2l1os"]
+
+[ext_resource type="PackedScene" uid="uid://ds05i2lwfffyj" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://dllgfd6h4cyfx" path="res://scenes/combat_level.tscn" id="2_rwgxs"]
 
 [node name="world" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(525, 357)
+
+[node name="combatLevel" parent="." instance=ExtResource("2_rwgxs")]
