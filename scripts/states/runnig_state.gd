@@ -1,11 +1,13 @@
 extends PlayerState
 
-@export var animated_sprite_2d: AnimatedSprite2D
-
 func enter(previous_state_path: String, data := {}) -> void:
 	animated_sprite_2d.play("run")
 
 func physics_update(_delta: float) -> void:
+	if  Input.is_action_just_pressed("jump") and player.is_on_floor():
+		finished.emit(JUMPING)
+		return
+	
 	var direction := Input.get_axis("left", "right")
 	
 	if !direction:

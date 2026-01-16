@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://ds05i2lwfffyj"]
+[gd_scene load_steps=36 format=3 uid="uid://ds05i2lwfffyj"]
 
 [ext_resource type="Texture2D" uid="uid://mpuqvp2xo7k2" path="res://assets/sprites/idle/fill/1.png" id="1_fulsm"]
 [ext_resource type="Script" uid="uid://dh3iflrwggn6o" path="res://scripts/player.gd" id="1_g2els"]
@@ -31,6 +31,8 @@
 [ext_resource type="Script" uid="uid://5iuuww3otw3o" path="res://scripts/states/state_machine.gd" id="29_dt7fs"]
 [ext_resource type="Script" uid="uid://dw0oxc3gfk8f0" path="res://scripts/states/idle_state.gd" id="30_wqfne"]
 [ext_resource type="Script" uid="uid://cyeeov8iqwx4r" path="res://scripts/states/runnig_state.gd" id="31_wnwbv"]
+[ext_resource type="Script" uid="uid://c0nt5nbdnchby" path="res://scenes/jumping_state.gd" id="32_gl8cc"]
+[ext_resource type="Script" uid="uid://dw6u7tjq88y6i" path="res://scenes/falling_state.gd" id="33_487ah"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jc3p3"]
 animations = [{
@@ -166,3 +168,13 @@ metadata/_custom_type_script = "uid://mu3pv87hoisw"
 script = ExtResource("31_wnwbv")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 metadata/_custom_type_script = "uid://bbhshmc1a4ybi"
+
+[node name="Jumping" type="Node" parent="StateMachine" node_paths=PackedStringArray("animated_sprite_2d")]
+script = ExtResource("32_gl8cc")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+metadata/_custom_type_script = "uid://bbhshmc1a4ybi"
+
+[node name="Falling" type="Node" parent="StateMachine" node_paths=PackedStringArray("animated_sprite_2d")]
+script = ExtResource("33_487ah")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+metadata/_custom_type_script = "uid://mu3pv87hoisw"

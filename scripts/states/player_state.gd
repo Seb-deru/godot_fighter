@@ -6,6 +6,7 @@ const JUMPING = "Jumping"
 const FALLING = "Falling"
 
 var player: Player
+@export var animated_sprite_2d: AnimatedSprite2D
 
 func _ready() -> void:
 	await owner.ready
