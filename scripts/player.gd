@@ -13,7 +13,6 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		
 	if !animated_sprite_2d.is_playing():
-		animated_sprite_2d.play("iddle")
 		is_punching = false
 
 
@@ -39,7 +38,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if !Input.is_action_just_pressed("jump") and !is_punching and is_on_floor():
-			animated_sprite_2d.play("iddle")
+		#if !Input.is_action_just_pressed("jump") and !is_punching and is_on_floor():
+			#animated_sprite_2d.play("iddle")
 		
 	move_and_slide()

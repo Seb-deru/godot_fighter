@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ds05i2lwfffyj"]
+[gd_scene load_steps=33 format=3 uid="uid://ds05i2lwfffyj"]
 
 [ext_resource type="Texture2D" uid="uid://mpuqvp2xo7k2" path="res://assets/sprites/idle/fill/1.png" id="1_fulsm"]
 [ext_resource type="Script" uid="uid://dh3iflrwggn6o" path="res://scripts/player.gd" id="1_g2els"]
@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://c31ee2tl86hr3" path="res://assets/sprites/run/fill/0014.png" id="18_bj30b"]
 [ext_resource type="Texture2D" uid="uid://b3n85khhrru1l" path="res://assets/sprites/punch/fill/punch-fill-0004.png" id="18_md1ol"]
 [ext_resource type="Texture2D" uid="uid://b2grp4up3bwav" path="res://assets/sprites/punch/fill/punch-fill-0006.png" id="19_bj30b"]
+[ext_resource type="Script" uid="uid://5iuuww3otw3o" path="res://scripts/states/state_machine.gd" id="29_dt7fs"]
+[ext_resource type="Script" uid="uid://dw0oxc3gfk8f0" path="res://scripts/states/iddle_state.gd" id="30_wqfne"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jc3p3"]
 animations = [{
@@ -149,3 +151,12 @@ autoplay = "iddle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-16, -23)
 shape = SubResource("CapsuleShape2D_31cv2")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("29_dt7fs")
+metadata/_custom_type_script = "uid://5iuuww3otw3o"
+
+[node name="IddleState" type="Node" parent="StateMachine" node_paths=PackedStringArray("animated_sprite_2d")]
+script = ExtResource("30_wqfne")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+metadata/_custom_type_script = "uid://mu3pv87hoisw"
