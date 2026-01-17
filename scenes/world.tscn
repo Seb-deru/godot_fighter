@@ -12,4 +12,10 @@ position = Vector2(527, 261)
 [node name="combatLevel" parent="." instance=ExtResource("2_rwgxs")]
 
 [node name="Barrel" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(926.00006, 527)
+position = Vector2(944, 528)
+
+[node name="Barrel2" parent="." instance=ExtResource("3_4wyf3")]
+position = Vector2(192, 528)
+
+[node name="Barrel3" parent="." instance=ExtResource("3_4wyf3")]
+position = Vector2(192, 480.00003)
