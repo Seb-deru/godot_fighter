@@ -1,6 +1,6 @@
 extends PlayerState
 
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.y = JUMP_VELOCITY
