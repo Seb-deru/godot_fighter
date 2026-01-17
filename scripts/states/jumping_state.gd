@@ -22,3 +22,7 @@ func physics_update(_delta: float) -> void:
 
 	if player.velocity.y >= 0:
 		finished.emit(FALLING)
+		
+	if Input.is_action_just_pressed("hit"):
+		finished.emit(ATTACK)
+		return

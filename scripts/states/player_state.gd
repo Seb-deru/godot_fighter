@@ -1,11 +1,13 @@
 class_name PlayerState extends State
 
-const IDLE = "Idle"
-const RUNNING = "Running"
-const JUMPING = "Jumping"
-const FALLING = "Falling"
+const IDLE := "Idle"
+const RUNNING := "Running"
+const JUMPING := "Jumping"
+const FALLING := "Falling"
+const ATTACK: = "Attack"
 
 var player: Player
+
 @export var animated_sprite_2d: AnimatedSprite2D
 
 func _ready() -> void:

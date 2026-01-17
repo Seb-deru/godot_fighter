@@ -14,6 +14,10 @@ func physics_update(_delta: float) -> void:
 		finished.emit(IDLE)
 		return
 	
+	if Input.is_action_just_pressed("hit"):
+		finished.emit(ATTACK)
+		return
+	
 	player.velocity.x = direction * player.SPEED
 	if direction > 0:
 		animated_sprite_2d.flip_h = true
