@@ -5,10 +5,14 @@ func enter(previous_state_path: String, data := {}) -> void:
 	pass
 
 		
-func physics_update(_delta: float) -> void:
-	if not player.is_on_floor():
-		player.velocity += player.get_gravity() * _delta
-		
+func physics_update(delta: float) -> void:
+	var input_direction_x := Input.get_axis("left", "right")
+	player.velocity.x = player.SPEED * input_direction_x
+	player.velocity.y += player.get_gravity().y * delta
+	player.move_and_slide()
+
 	if player.is_on_floor():
-		finished.emit(IDLE)
-		return
+		if is_equal_approx(input_direction_x, 0.0):
+			finished.emit(IDLE)
+		else:
+			finished.emit(RUNNING)

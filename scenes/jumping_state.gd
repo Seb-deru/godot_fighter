@@ -7,4 +7,11 @@ func enter(previous_state_path: String, data := {}) -> void:
 	animated_sprite_2d.play("jump")
 
 func physics_update(_delta: float) -> void:
-	finished.emit(FALLING)
+	var input_direction_x := Input.get_axis("left", "right")
+	player.velocity.x = player.SPEED * input_direction_x
+	player.velocity.y += player.get_gravity().y * _delta
+	player.move_and_slide()
+	
+
+	if player.velocity.y >= 0:
+		finished.emit(FALLING)
