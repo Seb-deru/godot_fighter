@@ -1,7 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	animated_sprite_2d.play("run")
+	animated_player.play("run")
 
 func physics_update(_delta: float) -> void:
 	if  Input.is_action_just_pressed("jump") and player.is_on_floor():
@@ -19,9 +19,9 @@ func physics_update(_delta: float) -> void:
 		return
 	
 	player.velocity.x = direction * player.SPEED
-	if direction > 0:
-		animated_sprite_2d.flip_h = true
-	else:
-		animated_sprite_2d.flip_h = false
+	#if direction > 0:
+		#animated_player.flip_h = true
+	#else:
+		#animated_player.flip_h = false
 		
 	player.move_and_slide()
