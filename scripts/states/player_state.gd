@@ -9,6 +9,7 @@ const ATTACK: = "Attack"
 var player: Player
 
 @export var animated_player: AnimationPlayer
+@export var sprite_2d: Sprite2D
 
 func _ready() -> void:
 	await owner.ready

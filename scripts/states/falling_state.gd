@@ -9,11 +9,11 @@ func physics_update(delta: float) -> void:
 	player.velocity.x = player.SPEED * input_direction_x
 	player.velocity.y += player.get_gravity().y * delta
 	
-	#if input_direction_x:
-		#if input_direction_x > 0:
-			#animated_player.flip_h = true
-		#else:
-			#animated_player.flip_h = false
+	if input_direction_x:
+		if input_direction_x > 0:
+			sprite_2d.flip_h = true
+		else:
+			sprite_2d.flip_h = false
 	
 	player.move_and_slide()
 
