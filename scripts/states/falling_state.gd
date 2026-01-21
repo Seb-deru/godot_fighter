@@ -9,11 +9,12 @@ func physics_update(delta: float) -> void:
 	player.velocity.x = player.SPEED * input_direction_x
 	player.velocity.y += player.get_gravity().y * delta
 	
-	if input_direction_x:
-		if input_direction_x > 0:
-			player.scale.x = -0.1
-		else:
-			player.scale.x = 0.1
+	if input_direction_x != 0:
+		var new_facing = input_direction_x
+		if new_facing != player.facing_direction:
+			player.facing_direction = new_facing
+			player.rotate(PI)
+			player.scale.y = abs(player.scale.y) * -new_facing
 	
 	player.move_and_slide()
 

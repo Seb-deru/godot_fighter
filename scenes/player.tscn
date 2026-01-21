@@ -169,16 +169,15 @@ _data = {
 &"run": SubResource("Animation_gl8cc")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31cv2"]
-radius = 274.0
-height = 784.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md1ol"]
+size = Vector2(40, 63)
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(-0.1, 0.1)
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(8, -14.000008)
+scale = Vector2(0.0773148, 0.093073234)
 texture = ExtResource("2_fulsm")
 
 [node name="Hitbox" type="Area2D" parent="Sprite2D"]
@@ -199,8 +198,8 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-16, -23)
-shape = SubResource("CapsuleShape2D_31cv2")
+position = Vector2(2, -9.5)
+shape = SubResource("RectangleShape2D_md1ol")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("29_dt7fs")
