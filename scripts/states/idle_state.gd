@@ -9,6 +9,7 @@ func physics_update(_delta: float) -> void:
 	
 	if direction:
 		finished.emit(RUNNING)
+		return
 		
 	if  Input.is_action_just_pressed("jump") and player.is_on_floor():
 		finished.emit(JUMPING)

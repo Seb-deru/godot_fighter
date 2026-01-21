@@ -20,8 +20,8 @@ func physics_update(_delta: float) -> void:
 	
 	player.velocity.x = direction * player.SPEED
 	if direction > 0:
-		sprite_2d.flip_h = true
+		player.scale.x = -0.1
 	else:
-		sprite_2d.flip_h = false
+		player.scale.x = 0.1
 		
 	player.move_and_slide()

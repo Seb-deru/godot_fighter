@@ -29,6 +29,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc3p3"]
 size = Vector2(30.000029, 13.000006)
 
+[sub_resource type="Animation" id="Animation_31cv2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_fulsm")]
+}
+
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "idle"
 loop_mode = 1
@@ -43,21 +58,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("1_fulsm"), ExtResource("2_fulsm"), ExtResource("5_4r5pv"), ExtResource("6_60mlk"), ExtResource("7_i4ail"), ExtResource("8_a38lo"), ExtResource("9_4ni07"), ExtResource("10_l71n6"), ExtResource("11_ke2ow"), ExtResource("12_ujl30")]
-}
-
-[sub_resource type="Animation" id="Animation_31cv2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_fulsm")]
 }
 
 [sub_resource type="Animation" id="Animation_gl8cc"]
@@ -89,7 +89,7 @@ radius = 274.0
 height = 784.0
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(-0.1, 0.1)
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

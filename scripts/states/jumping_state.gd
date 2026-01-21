@@ -13,15 +13,15 @@ func physics_update(_delta: float) -> void:
 	
 	if input_direction_x:
 		if input_direction_x > 0:
-			sprite_2d.flip_h = true
+			player.scale.x = -0.1
 		else:
-			sprite_2d.flip_h = false
+			player.scale.x = 0.1
 	
 	player.move_and_slide()
 	
-
 	if player.velocity.y >= 0:
 		finished.emit(FALLING)
+		return
 		
 	if Input.is_action_just_pressed("hit"):
 		finished.emit(ATTACK)
