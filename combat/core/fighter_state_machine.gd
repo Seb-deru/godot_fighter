@@ -43,3 +43,6 @@ func _physics_process(delta: float) -> void:
 func handle_command(command: String) -> void:
 	print(command)
 	_transition_to_next_state("Attack", {})
+	#var move := fighter.weapon.move_map.get(command)
+	#if move:
+		#change_state("Attack", move)

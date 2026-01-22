@@ -62,8 +62,6 @@ func _match_special() -> bool:
 		return false
 	return _match_motion([
 		Vector2(0, 1),
-		Vector2(1, 1),
-		Vector2(1, 0)
 	])
 
 func _match_motion(pattern: Array[Vector2]) -> bool:
