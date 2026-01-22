@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dr6k47ny2l1os"]
 
-[ext_resource type="PackedScene" uid="uid://ds05i2lwfffyj" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://ds05i2lwfffyj" path="res://combat/core/fighter.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://dllgfd6h4cyfx" path="res://scenes/combat_level.tscn" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://ccrx3vpp787po" path="res://scenes/barrel.tscn" id="3_4wyf3"]
 

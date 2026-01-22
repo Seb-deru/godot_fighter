@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djkykduipsh1i" path="res://scenes/barrel.gd" id="1_n8wf6"]
 [ext_resource type="Texture2D" uid="uid://brykcjii314r0" path="res://assets/sprites/Barrel.png" id="1_q36op"]
-[ext_resource type="Script" uid="uid://b2rtiqpvewye2" path="res://scripts/hurtbox.gd" id="2_ptqd7"]
+[ext_resource type="Script" uid="uid://b2rtiqpvewye2" path="res://combat/data/hurtbox.gd" id="2_ptqd7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n8wf6"]
 
