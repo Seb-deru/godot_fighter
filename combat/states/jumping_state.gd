@@ -13,7 +13,7 @@ func physics_update(delta: float) -> void:
 		finished.emit(FALLING)
 		return
 		
-	if Input.is_action_just_pressed("hit"):
+	if Input.is_action_just_pressed("attack_light"):
 		finished.emit(ATTACK)
 		return
 

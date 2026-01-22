@@ -8,7 +8,7 @@ func physics_update(delta: float) -> void:
 	var input_direction_x := player_direction()
 	apply_gravity(delta)
 
-	if Input.is_action_just_pressed("hit"):
+	if Input.is_action_just_pressed("attack_light"):
 		finished.emit(ATTACK)
 		return
 

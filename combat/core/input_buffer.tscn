@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c71kfg5f45hc5"]
+
+[ext_resource type="Script" uid="uid://6dxif60pdph1" path="res://combat/core/InputBuffer.gd" id="1_x1nmn"]
+
+[node name="InputBuffer" type="Node"]
+script = ExtResource("1_x1nmn")

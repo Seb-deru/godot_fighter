@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ds05i2lwfffyj"]
+[gd_scene load_steps=45 format=3 uid="uid://ds05i2lwfffyj"]
 
 [ext_resource type="Texture2D" uid="uid://mpuqvp2xo7k2" path="res://assets/sprites/idle/fill/1.png" id="1_fulsm"]
 [ext_resource type="Script" uid="uid://dh3iflrwggn6o" path="res://combat/core/fighter.gd" id="1_g2els"]
@@ -33,6 +33,7 @@
 [ext_resource type="Script" uid="uid://c0nt5nbdnchby" path="res://combat/states/jumping_state.gd" id="32_gl8cc"]
 [ext_resource type="Script" uid="uid://dw6u7tjq88y6i" path="res://combat/states/falling_state.gd" id="33_487ah"]
 [ext_resource type="Script" uid="uid://bk5ocqy515tv" path="res://combat/states/attack_state.gd" id="34_md1ol"]
+[ext_resource type="PackedScene" uid="uid://c71kfg5f45hc5" path="res://combat/core/input_buffer.tscn" id="35_5vb6p"]
 [ext_resource type="Script" uid="uid://c86yp4bcpmbu" path="res://combat/data/hitbox.gd" id="35_bj30b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc3p3"]
@@ -172,8 +173,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md1ol"]
 size = Vector2(36, 60.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_buffer")]
 script = ExtResource("1_g2els")
+input_buffer = NodePath("InputBuffer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, -14.000008)
@@ -234,3 +236,5 @@ script = ExtResource("34_md1ol")
 animated_player = NodePath("../../AnimationPlayer")
 sprite_2d = NodePath("../../Sprite2D")
 metadata/_custom_type_script = "uid://bbhshmc1a4ybi"
+
+[node name="InputBuffer" parent="." instance=ExtResource("35_5vb6p")]

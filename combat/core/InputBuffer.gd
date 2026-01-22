@@ -1,12 +1,10 @@
 class_name InputBuffer
 extends Node
 
-# === CONFIGURATION ===
 @export var buffer_size := 15              # frames conservées
 @export var motion_leniency := 6            # tolérance directions
 @export var button_leniency := 5            # tolérance boutons
 
-# === STRUCTURE D'UNE FRAME ===
 class InputFrame:
 	var dir: Vector2
 	var buttons := {}
@@ -15,20 +13,17 @@ class InputFrame:
 		dir = _dir
 		buttons = _buttons
 
-# === BUFFER ===
 var buffer: Array[InputFrame] = []
 
-# === UPDATE ===
 func _physics_process(_delta):
 	_record_frame()
 
-# === CAPTURE INPUT ===
 func _record_frame():
 	var dir := Vector2(
-		Input.get_action_strength("move_right")
-		- Input.get_action_strength("move_left"),
-		Input.get_action_strength("move_down")
-		- Input.get_action_strength("move_up")
+		Input.get_action_strength("right")
+		- Input.get_action_strength("left"),
+		Input.get_action_strength("down")
+		- Input.get_action_strength("up")
 	).round()
 
 	var buttons := {
@@ -42,10 +37,6 @@ func _record_frame():
 	if buffer.size() > buffer_size:
 		buffer.pop_back()
 
-# =========================================================
-# === PUBLIC API ==========================================
-# =========================================================
-
 func get_command() -> String:
 	if _match_special():
 		return "SPECIAL"
@@ -58,9 +49,6 @@ func get_command() -> String:
 func consume():
 	buffer.clear()
 
-# =========================================================
-# === MATCHING ============================================
-# =========================================================
 
 func _match_button(button: String) -> bool:
 	for i in range(min(button_leniency, buffer.size())):

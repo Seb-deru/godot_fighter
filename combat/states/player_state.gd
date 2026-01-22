@@ -6,14 +6,14 @@ const JUMPING := "Jumping"
 const FALLING := "Falling"
 const ATTACK: = "Attack"
 
-var player: Player
+var player: Fighter
 
 @export var animated_player: AnimationPlayer
 @export var sprite_2d: Sprite2D
 
 func _ready() -> void:
 	await owner.ready
-	player = owner as Player
+	player = owner as Fighter
 	assert(player != null, "The PlayerState state type must be used only in the player scene. It needs the owner to be a Player node.")
 
 func move_player() -> void:
