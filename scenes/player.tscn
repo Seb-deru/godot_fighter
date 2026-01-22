@@ -65,6 +65,23 @@ tracks/1/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_487ah"]
+resource_name = "fall"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("23_wqfne"), ExtResource("24_wnwbv")]
+}
+
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "idle"
 loop_mode = 1
@@ -81,23 +98,6 @@ tracks/0/keys = {
 "values": [ExtResource("1_fulsm"), ExtResource("2_fulsm"), ExtResource("5_4r5pv"), ExtResource("6_60mlk"), ExtResource("7_i4ail"), ExtResource("8_a38lo"), ExtResource("9_4ni07"), ExtResource("10_l71n6"), ExtResource("11_ke2ow"), ExtResource("12_ujl30")]
 }
 
-[sub_resource type="Animation" id="Animation_gl8cc"]
-resource_name = "run"
-length = 0.7
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("13_ke2ow"), ExtResource("14_ujl30"), ExtResource("15_31cv2"), ExtResource("16_pf23h"), ExtResource("17_dt7fs"), ExtResource("18_wqfne"), ExtResource("19_wnwbv")]
-}
-
 [sub_resource type="Animation" id="Animation_wnwbv"]
 resource_name = "jump"
 length = 0.6
@@ -112,23 +112,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("20_pf23h"), ExtResource("21_dt7fs"), ExtResource("22_wqfne")]
-}
-
-[sub_resource type="Animation" id="Animation_487ah"]
-resource_name = "fall"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("23_wqfne"), ExtResource("24_wnwbv")]
 }
 
 [sub_resource type="Animation" id="Animation_t4otl"]
@@ -159,6 +142,23 @@ tracks/1/keys = {
 "values": [true, false, true]
 }
 
+[sub_resource type="Animation" id="Animation_gl8cc"]
+resource_name = "run"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_ke2ow"), ExtResource("14_ujl30"), ExtResource("15_31cv2"), ExtResource("16_pf23h"), ExtResource("17_dt7fs"), ExtResource("18_wqfne"), ExtResource("19_wnwbv")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y4r1p"]
 _data = {
 &"RESET": SubResource("Animation_31cv2"),
@@ -170,7 +170,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md1ol"]
-size = Vector2(40, 63)
+size = Vector2(36, 60.5)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -198,7 +198,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -9.5)
+position = Vector2(9, -11.75)
 shape = SubResource("RectangleShape2D_md1ol")
 
 [node name="StateMachine" type="Node" parent="."]
