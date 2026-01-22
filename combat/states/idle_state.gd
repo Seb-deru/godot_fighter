@@ -18,7 +18,3 @@ func physics_update(_delta: float) -> void:
 	if not player.is_on_floor():
 		finished.emit(FALLING)
 		return
-		
-	if Input.is_action_just_pressed("attack_light"):
-		finished.emit(ATTACK)
-		return

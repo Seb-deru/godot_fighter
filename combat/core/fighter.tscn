@@ -173,9 +173,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md1ol"]
 size = Vector2(36, 60.5)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_buffer")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_buffer", "state_machine")]
 script = ExtResource("1_g2els")
 input_buffer = NodePath("InputBuffer")
+state_machine = NodePath("StateMachine")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, -14.000008)

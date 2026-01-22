@@ -17,10 +17,6 @@ func physics_update(_delta: float) -> void:
 		finished.emit(IDLE)
 		return
 	
-	if Input.is_action_just_pressed("attack_light"):
-		finished.emit(ATTACK)
-		return
-	
 	player.velocity.x = direction * player.SPEED
 	
 	move_player()
