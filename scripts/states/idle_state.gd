@@ -5,7 +5,7 @@ func enter(previous_state_path: String, data := {}) -> void:
 	animated_player.play("idle")
 
 func physics_update(_delta: float) -> void:
-	var direction := Input.get_axis("left", "right")
+	var direction := player_direction()
 	
 	if direction:
 		finished.emit(RUNNING)

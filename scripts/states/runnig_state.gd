@@ -11,7 +11,7 @@ func physics_update(_delta: float) -> void:
 		finished.emit(JUMPING)
 		return
 	
-	var direction := Input.get_axis("left", "right")
+	var direction := player_direction()
 	
 	if direction == 0:
 		finished.emit(IDLE)
@@ -23,11 +23,4 @@ func physics_update(_delta: float) -> void:
 	
 	player.velocity.x = direction * player.SPEED
 	
-	if direction != 0:
-		var new_facing = direction
-		if new_facing != player.facing_direction:
-			player.facing_direction = new_facing
-			player.rotate(PI)
-			player.scale.y = abs(player.scale.y) * -new_facing
-		
-	player.move_and_slide()
+	move_player()
