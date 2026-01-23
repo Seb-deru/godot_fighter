@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=2 format=3 uid="uid://d1mvdk0apoals"]
+
+[ext_resource type="Script" uid="uid://ed4kj17nigc6" path="res://combat/data/MoveData.gd" id="1_bbcbd"]
+
+[resource]
+script = ExtResource("1_bbcbd")
+id = "fists_uppercut"
+display_name = "uppercut"
+animation = "punch"
+startup = 6
+active = 6
+recovery = 18
+damage = 18
+hitstun = 22
+blockstun = 0
+cancel_options = []
+interruptible_on_hit = false
+metadata/_custom_type_script = "uid://ed4kj17nigc6"

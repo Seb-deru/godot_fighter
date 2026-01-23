@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=2 format=3 uid="uid://bnoo2tpoxxyll"]
+
+[ext_resource type="Script" uid="uid://ed4kj17nigc6" path="res://combat/data/MoveData.gd" id="1_cgmn6"]
+
+[resource]
+script = ExtResource("1_cgmn6")
+metadata/_custom_type_script = "uid://ed4kj17nigc6"

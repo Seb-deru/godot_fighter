@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=5 format=3 uid="uid://rtkac83x26eo"]
+
+[ext_resource type="Resource" uid="uid://d1mvdk0apoals" path="res://combat/moves/fists_light.tres" id="1_8cwhj"]
+[ext_resource type="Resource" uid="uid://bphoauv3limsh" path="res://combat/moves/fists_heavy.tres" id="2_6xoin"]
+[ext_resource type="Resource" uid="uid://bnoo2tpoxxyll" path="res://combat/moves/fists_uppercut.tres" id="3_1loan"]
+[ext_resource type="Script" uid="uid://tcnfdk0e1j8w" path="res://combat/data/WeaponData.gd" id="4_pyil1"]
+
+[resource]
+script = ExtResource("4_pyil1")
+metadata/_custom_type_script = "uid://tcnfdk0e1j8w"

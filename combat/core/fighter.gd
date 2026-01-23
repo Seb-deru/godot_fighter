@@ -2,6 +2,7 @@ class_name Fighter extends CharacterBody2D
 
 @export var input_buffer : InputBuffer
 @export var state_machine: StateMachine
+@export var weapon : WeaponData
 
 const SPEED = 500.0
 var facing_direction := -1
